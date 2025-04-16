@@ -21,3 +21,26 @@ int main() {
     printf("All food collected! Final Score: %d\n", score);
     return 0;
 }
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    char move;
+    int caught = 0;
+    srand(time(0));
+
+    for(int i=0; i<5; i++) {
+        printf("A star is falling! Type 'c' to catch: ");
+        move = getchar();
+        getchar();  // Clear newline
+        if (move == 'c') {
+            printf("Caught it!\n");
+            caught++;
+        } else {
+            printf("Missed!\n");
+        }
+    }
+    printf("You caught %d stars!\n", caught);
+    return 0;
+}
