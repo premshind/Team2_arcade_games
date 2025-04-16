@@ -44,3 +44,56 @@ int main() {
     printf("You caught %d stars!\n", caught);
     return 0;
 }
+====LOGINPAGE FOR FALLING TARS====
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
+// Function to display the game after login
+void playGame() {
+    char move;
+    int caught = 0;
+    srand(time(0));
+
+    for (int i = 0; i < 5; i++) {
+        printf("A star is falling! Type 'c' to catch: ");
+        move = getchar();
+        getchar(); // Clear newline
+        if (move == 'c') {
+            printf("Caught it!\n");
+            caught++;
+        } else {
+            printf("Missed!\n");
+        }
+    }
+    printf("You caught %d stars!\n", caught);
+}
+
+int main() {
+    char username[20], password[20];
+    char stored_username[] = "player1";
+    char stored_password[] = "star123";
+
+    printf("Welcome to the Falling Stars Login Page\n");
+    printf("----------------------------------------\n");
+
+    // Get username
+    printf("Enter Username: ");
+    scanf("%s", username);
+
+    // Get password
+    printf("Enter Password: ");
+    scanf("%s", password);
+
+    // Validate credentials
+    if (strcmp(username, stored_username) == 0 && strcmp(password, stored_password) == 0) {
+        printf("Login successful! Starting the game...\n\n");
+        getchar(); // Clear newline before the game starts
+        playGame(); // Call the game function
+    } else {
+        printf("Invalid username or password. Please try again.\n");
+    }
+
+    return 0;
+}
