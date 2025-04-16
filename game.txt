@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int food = 5, score = 0;
+    char move;
+
+    printf("Collect %d food items by pressing 'f'\n", food);
+    while(food > 0) {
+        printf("Press 'f' to collect: ");
+        move = getchar();
+        getchar();  // Clear newline
+
+        if (move == 'f') {
+            printf("Food collected!\n");
+            score++;
+            food--;
+        } else {
+            printf("Wrong key! Try again.\n");
+        }
+    }
+    printf("All food collected! Final Score: %d\n", score);
+    return 0;
+}
