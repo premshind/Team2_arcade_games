@@ -44,3 +44,35 @@ int main() {
     printf("You caught %d stars!\n", caught);
     return 0;
 }
+*LOGIN PAGE FOR (FOOD COLLECTOR)
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char username[20], password[20];
+    char stored_username[] = "player1";
+    char stored_password[] = "arcade123";
+
+    printf("Welcome to the Game Login Page\n");
+    printf("--------------------------------\n");
+
+    // Get username
+    printf("Enter Username: ");
+    scanf("%s", username);
+
+    // Get password
+    printf("Enter Password: ");
+    scanf("%s", password);
+
+    // Validate credentials
+    if (strcmp(username, stored_username) == 0 && strcmp(password, stored_password) == 0) {
+        printf("Login successful! Starting the game...\n\n");
+
+        // Proceed to the game (call your game code here)
+        // Example: game(); // Uncomment when integrated
+    } else {
+        printf("Invalid username or password. Please try again.\n");
+    }
+
+    return 0;
+}
