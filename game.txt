@@ -44,3 +44,20 @@ int main() {
     printf("You caught %d stars!\n", caught);
     return 0;
 }
+*GAMELOGO FOR FOOD COLLECTOR*
+#include <stdio.h>
+
+void displayLogo() {
+    printf("*****************************************\n");
+    printf("*                                       *\n");
+    printf("*      WELCOME TO FOOD COLLECTOR!       *\n");
+    printf("*                                       *\n");
+    printf("*         Collect & Conquer!            *\n");
+    printf("*                                       *\n");
+    printf("*****************************************\n");
+}
+
+int main() {
+    displayLogo(); // Display game logo
+    return 0;
+}
